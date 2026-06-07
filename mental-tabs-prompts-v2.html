@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light only;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>5 AI Prompts to Close Your Mental Tabs</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light only;
+    --bg: #FAF5EE;
+    --headline: #3D2422;
+    --accent: #D4735A;
+    --subtext: #7A4A3E;
+    --card-bg: #F2E8DF;
+    --prompt-bg: #EDE3D8;
+    --border: #E2D0C4;
+    --copied: #7A9E7E;
+    --white: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: #FAF5EE !important;
+    color: #3D2422 !important;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    padding: 0 0 80px;
+  }
+
+  .header {
+    background: #F2E8DF !important;
+    border-bottom: 1px solid #E2D0C4;
+    padding: 52px 24px 44px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(212,115,90,0.1);
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(212,115,90,0.07);
+  }
+  .header-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #D4735A !important;
+    margin-bottom: 16px;
+    position: relative; z-index: 1;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 8vw, 50px);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #3D2422 !important;
+    margin-bottom: 14px;
+    position: relative; z-index: 1;
+  }
+  .header h1 em { font-style: italic; color: #D4735A !important; }
+  .header-sub {
+    font-size: 14px;
+    font-weight: 300;
+    color: #7A4A3E !important;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    position: relative; z-index: 1;
+  }
+  .header-credit {
+    font-size: 12px;
+    color: #7A4A3E !important;
+    opacity: 0.7;
+    letter-spacing: 0.04em;
+    position: relative; z-index: 1;
+  }
+
+  .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+  .intro { padding: 40px 0 8px; }
+  .intro-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+  .intro-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #7A4A3E !important;
+  }
+  .step-num {
+    background: #D4735A !important;
+    color: #FFFFFF !important;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    font-size: 11px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .intro-step strong { color: #3D2422 !important; font-weight: 500; }
+
+  .hack-box {
+    background: #FFF8F5 !important;
+    border: 1px solid #E2D0C4;
+    border-left: 3px solid #D4735A;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 20px 0 8px;
+  }
+  .hack-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #D4735A !important; margin-bottom: 5px;
+  }
+  .hack-box p { font-size: 13px; line-height: 1.6; color: #7A4A3E !important; }
+  .hack-box strong { color: #3D2422 !important; }
+
+  .save-section {
+    background: #FFFFFF !important;
+    border-radius: 14px;
+    padding: 24px 22px;
+    margin: 32px 0;
+    border: 1px solid #E2D0C4;
+  }
+  .save-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 600;
+    margin-bottom: 16px;
+    color: #3D2422 !important;
+  }
+  .save-option { margin-bottom: 16px; }
+  .save-option:last-child { margin-bottom: 0; }
+  .save-option-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: #D4735A !important; margin-bottom: 5px;
+  }
+  .save-option p { font-size: 14px; line-height: 1.6; color: #7A4A3E !important; }
+  .save-option p strong { color: #3D2422 !important; }
+  .save-option p em {
+    background: #EDE3D8 !important;
+    padding: 1px 6px; border-radius: 4px;
+    font-style: italic; color: #3D2422 !important; font-size: 13px;
+  }
+  .divider { border: none; border-top: 1px solid #E2D0C4; margin: 16px 0; }
+
+  .copy-all-wrap { margin: 0 0 36px; text-align: center; }
+  .btn-copy-all {
+    background: #D4735A !important;
+    color: #FFFFFF !important;
+    border: none; border-radius: 50px;
+    padding: 14px 32px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; letter-spacing: 0.03em;
+    transition: all 0.2s ease;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 16px rgba(212,115,90,0.25);
+  }
+  .btn-copy-all:hover { background: #c4624a !important; transform: translateY(-1px); }
+  .btn-copy-all.copied { background: #7A9E7E !important; box-shadow: none; }
+  .btn-copy-all svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .section-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: #D4735A !important;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E2D0C4;
+  }
+
+  .prompt-card {
+    background: #FFFFFF !important;
+    border-radius: 16px;
+    padding: 26px 22px;
+    margin-bottom: 18px;
+    border: 1px solid #E2D0C4;
+    box-shadow: 0 2px 10px rgba(61,36,34,0.04);
+  }
+  .prompt-card.bonus {
+    background: #FFF8F5 !important;
+    border-color: rgba(212,115,90,0.4);
+  }
+  .prompt-number {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #D4735A !important; margin-bottom: 3px;
+  }
+  .prompt-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 600;
+    color: #3D2422 !important;
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .prompt-text-box {
+    background: #EDE3D8 !important;
+    border-radius: 10px;
+    padding: 16px 18px; margin-bottom: 12px;
+    font-size: 14px; line-height: 1.75;
+    color: #3D2422 !important;
+    font-style: italic;
+  }
+  .prompt-instruction {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; color: #7A4A3E !important;
+    line-height: 1.5; padding: 10px 14px;
+    background: #F2E8DF !important;
+    border-radius: 8px; margin-bottom: 14px;
+  }
+  .prompt-instruction .arrow { color: #D4735A !important; flex-shrink: 0; margin-top: 1px; }
+
+  .btn-copy {
+    background: transparent !important;
+    border: 1.5px solid #E2D0C4;
+    border-radius: 50px; padding: 8px 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 500;
+    color: #7A4A3E !important;
+    cursor: pointer;
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: all 0.2s ease;
+  }
+  .btn-copy:hover { border-color: #D4735A; color: #D4735A !important; }
+  .btn-copy.copied { border-color: #7A9E7E; color: #7A9E7E !important; }
+  .btn-copy svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+  .footer {
+    margin-top: 56px;
+    padding: 40px 24px;
+    background: #F2E8DF !important;
+    border-top: 1px solid #E2D0C4;
+    text-align: center;
+  }
+  .footer p { font-size: 14px; line-height: 1.7; color: #7A4A3E !important; margin-bottom: 6px; }
+  .footer .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 400;
+    color: #3D2422 !important;
+    margin-bottom: 12px; margin-top: 4px; line-height: 1.3;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+  .footer-link {
+    display: inline-block;
+    color: #D4735A !important;
+    text-decoration: none;
+    font-size: 13px; font-weight: 500;
+  }
+  .footer-link:hover { text-decoration: underline; }
+  .footer-credit {
+    margin-top: 24px; font-size: 12px;
+    color: #7A4A3E !important; opacity: 0.6;
+    letter-spacing: 0.06em;
+  }
+
+  .toast {
+    position: fixed; bottom: 24px; left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #3D2422 !important;
+    color: #FAF5EE !important;
+    padding: 12px 24px; border-radius: 50px;
+    font-size: 13px; font-weight: 500;
+    z-index: 999; transition: transform 0.3s ease;
+    pointer-events: none; white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-eyebrow">@stephs.mom.era</div>
+  <h1>5 AI Prompts to Close<br>Your <em>Mental Tabs</em></h1>
+  <p class="header-sub">For the working mom whose brain doesn't have an off switch.</p>
+  <div class="header-credit">Made by Steph · working mom · simple systems to help you reduce the mental load</div>
+</div>
+
+<div class="container">
+
+  <div class="intro">
+    <div class="intro-steps">
+      <div class="intro-step"><span class="step-num">1</span><span>Open <strong>ChatGPT or Claude</strong> — both are free.</span></div>
+      <div class="intro-step"><span class="step-num">2</span><span>Copy a prompt below and paste it into the chat.</span></div>
+      <div class="intro-step"><span class="step-num">3</span><span>Add your situation at the end. Hit send.</span></div>
+    </div>
+    <div class="hack-box">
+      <div class="hack-label">💡 Skip the typing entirely</div>
+      <p>Use the <strong>microphone on your phone keyboard</strong> to talk instead of type. AI is smart enough to understand even messy talk-to-text. Way faster.</p>
+    </div>
+  </div>
+
+  <div class="save-section">
+    <h3>How to Keep These Handy</h3>
+    <div class="save-option">
+      <div class="save-option-label">✦ Easiest option</div>
+      <p>Bookmark this page and come back whenever you need it. Done.</p>
+    </div>
+    <hr class="divider">
+    <div class="save-option">
+      <div class="save-option-label">✦ Want them inside your AI app?</div>
+      <p>Hit <strong>"Copy All Prompts"</strong> below. Paste into a new chat and say: <em>"These are my go-to prompts — save them so I can come back to them."</em> Bookmark that chat.</p>
+    </div>
+  </div>
+
+  <div class="copy-all-wrap">
+    <button class="btn-copy-all" onclick="copyAll(this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy All 5 Prompts + Bonus
+    </button>
+  </div>
+
+  <div class="section-label">The Prompts</div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 1</div>
+    <div class="prompt-name">The Parenting Guru</div>
+    <div class="prompt-text-box">
+      <p id="p1">I need practical parenting advice I can actually use today. Use evidence-based gentle parenting and child development principles, but keep it realistic — I'm not looking for perfect, I'm looking for something that might actually work tonight. Give me 2 or 3 things I can try right now. Here's what's happening:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type the specific behavior or situation — the more specific, the better the advice.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p1', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 2</div>
+    <div class="prompt-name">The Dinner Decider</div>
+    <div class="prompt-text-box">
+      <p id="p2">I need dinner ideas for tonight. I have picky kids and I'm tired. Give me 3 options that take 30 minutes or less, use normal ingredients, and have a realistic shot at actually getting eaten. Here's what I'm working with:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type what's in your fridge and pantry — or snap a photo and attach it before you hit send.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p2', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 3</div>
+    <div class="prompt-name">The Brain Dump Clearer</div>
+    <div class="prompt-text-box">
+      <p id="p3">I'm a working mom and my brain is completely overwhelmed right now. I'm going to give you everything that's swirling in my head — tasks I need to do, things I'm worried about, stuff I promised people, appointments I might be forgetting, and random thoughts taking up space. Sort all of it into three buckets: what genuinely needs to happen today, what can realistically wait, and what I should just let go of entirely. Be honest and be ruthless. Here's everything:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type your chaos here — don't filter it, just dump everything out. Then hit send.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p3', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 4</div>
+    <div class="prompt-name">The Morning Brief</div>
+    <div class="prompt-text-box">
+      <p id="p4">I need a quick rundown before I leave the house. Look at my day and tell me: what do I need to prep right now, what am I probably forgetting, and is there anything I should handle before things get chaotic. Keep it fast and practical. Here's my day:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type your calendar and anything you know is coming today.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p4', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 5</div>
+    <div class="prompt-name">The Gentle Reframe</div>
+    <div class="prompt-text-box">
+      <p id="p5">I'm having a hard mom moment and I need you to talk me off the ledge like a smart, kind friend — not a therapist, not a motivational poster, just someone who gets it. Acknowledge what I'm feeling first, then help me see it differently if you can. Here's what's going on:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type what happened — or just how you're feeling. You don't have to explain it perfectly.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p5', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card bonus">
+    <div class="prompt-number">🎁 Bonus Prompt</div>
+    <div class="prompt-name">The Snack Scramble</div>
+    <div class="prompt-text-box">
+      <p id="p6">I need a balanced snack idea for my kids right now — something with a protein, a fruit, and a carb. Quick, no cooking, not too unhealthy, and ideally something that won't cause a meltdown. Give me 3 options using what I have on hand. Here's what's available:</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type what you have — or snap a photo of your fridge or pantry and attach it before you hit send.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p6', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>These prompts are part of the Rosie universe —</p>
+  <div class="footer-title">an app I'm building from scratch as a working mom,<br>documenting every step in public.</div>
+  <p>Follow along for more AI hacks that fit real mom life. Low effort, high impact.</p>
+  <div class="footer-links">
+    <a class="footer-link" href="https://instagram.com/stephs.mom.era" target="_blank">📲 @stephs.mom.era on Instagram</a>
+    <a class="footer-link" href="https://rosie-waitlist.carrd.co/" target="_blank">🌸 Join the Rosie Waitlist</a>
+  </div>
+  <div class="footer-credit">Made with love · and a lot of AI</div>
+</div>
+
+<div class="toast" id="toast">✓ Copied</div>
+
+<script>
+  const prompts = {
+    p1: document.getElementById('p1').textContent.trim(),
+    p2: document.getElementById('p2').textContent.trim(),
+    p3: document.getElementById('p3').textContent.trim(),
+    p4: document.getElementById('p4').textContent.trim(),
+    p5: document.getElementById('p5').textContent.trim(),
+    p6: document.getElementById('p6').textContent.trim(),
+  };
+  const labels = {
+    p1: 'PROMPT 1 — THE PARENTING GURU',
+    p2: 'PROMPT 2 — THE DINNER DECIDER',
+    p3: 'PROMPT 3 — THE BRAIN DUMP CLEARER',
+    p4: 'PROMPT 4 — THE MORNING BRIEF',
+    p5: 'PROMPT 5 — THE GENTLE REFRAME',
+    p6: 'BONUS — THE SNACK SCRAMBLE',
+  };
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+  function copyPrompt(id, btn) {
+    const el = document.createElement("textarea"); el.value = prompts[id]; document.body.appendChild(el); el.select(); document.execCommand("copy"); document.body.removeChild(el); (() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+      btn.classList.add('copied');
+      showToast('✓ Prompt copied');
+      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+  function copyAll(btn) {
+    const intro = `5 AI PROMPTS TO CLOSE YOUR MENTAL TABS\nFrom @stephs.mom.era\n\nSave these as my go-to mom prompts. I'll ask for them by name.\n\n`;
+    const allText = Object.entries(prompts).map(([id, text]) => `--- ${labels[id]} ---\n${text}`).join('\n\n');
+    const el = document.createElement("textarea"); el.value = intro + allText; document.body.appendChild(el); el.select(); document.execCommand("copy"); document.body.removeChild(el); (() => {
+      const orig = btn.innerHTML;
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All Copied!`;
+      btn.classList.add('copied');
+      showToast('✓ All 6 prompts copied');
+      setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2500);
+    });
+  }
+</script>
+</body>
+</html>
