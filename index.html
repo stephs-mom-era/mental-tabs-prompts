@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<title>5 AI Prompts to Close Your Mental Tabs</title>
+<title>The Working Mom's AI Prompt Kit</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -25,6 +25,7 @@
   html, body {
     background: #FAF5EE !important;
     color: #3D2422 !important;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -93,6 +94,33 @@
   }
 
   .container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+  .toc {
+    max-width: 680px; margin: -22px auto 0; padding: 0 20px;
+    position: relative; z-index: 2;
+  }
+  .toc-inner {
+    background: #FFFFFF !important;
+    border: 1px solid #E2D0C4;
+    border-radius: 50px;
+    padding: 8px;
+    display: flex; flex-wrap: wrap; gap: 6px;
+    box-shadow: 0 4px 16px rgba(61,36,34,0.06);
+  }
+  .toc-link {
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.02em;
+    color: #7A4A3E !important;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+  .toc-link:hover { background: #F2E8DF !important; color: #D4735A !important; }
 
   .intro { padding: 40px 0 8px; }
   .intro-steps { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
@@ -286,9 +314,16 @@
 
 <div class="header">
   <div class="header-eyebrow">@stephs.mom.era</div>
-  <h1>5 AI Prompts to Close<br>Your <em>Mental Tabs</em></h1>
-  <p class="header-sub">For the working mom whose brain doesn't have an off switch.</p>
+  <h1>The Working Mom's<br><em>AI Prompt</em> Kit</h1>
+  <p class="header-sub">Real prompts for real mom moments — from mental overload to the back seat of the car.</p>
   <div class="header-credit">Made by Steph · working mom · simple systems to help you reduce the mental load</div>
+</div>
+
+<div class="toc">
+  <nav class="toc-inner">
+    <a class="toc-link" href="#mental-load">🧠 Mental Load Reducer</a>
+    <a class="toc-link" href="#road-trip">🚗 Road Trip</a>
+  </nav>
 </div>
 
 <div class="container">
@@ -321,11 +356,11 @@
   <div class="copy-all-wrap">
     <button class="btn-copy-all" onclick="copyAll(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-      Copy All 5 Prompts + Bonus
+      Copy All 11 Prompts
     </button>
   </div>
 
-  <div class="section-label">The Prompts</div>
+  <div class="section-label" id="mental-load">🧠 Mental Load Reducer</div>
 
   <div class="prompt-card">
     <div class="prompt-number">Prompt 1</div>
@@ -423,7 +458,90 @@
     </button>
   </div>
 
+  <div class="section-label" id="road-trip" style="margin-top: 12px;">🚗 Road Trip</div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 7</div>
+    <div class="prompt-name">The Would-You-Rather Generator</div>
+    <div class="prompt-text-box">
+      <p id="p7">Play would-you-rather with my kids. Alternate between silly, age-appropriate options they'd both laugh at — animals, superheroes, dinosaurs, unicorns. Keep it going until I say stop. My kids are [list names and ages].</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type your kids' names and ages, then hand your phone over or read it out loud.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p7', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 8</div>
+    <div class="prompt-name">The Road Trip Detective</div>
+    <div class="prompt-text-box">
+      <p id="p8">Turn my kid into a road trip detective. Give her a mission to spot 5 things in the next 10 minutes — a red truck, a farm animal, something round, something with wheels. When she finds one, she reports back and you give her a new mission.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Hand over the phone and let AI run the mission — she reports back out loud or by typing.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p8', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 9</div>
+    <div class="prompt-name">The Curious Character</div>
+    <div class="prompt-text-box">
+      <p id="p9">Be a baby cow who just learned to talk. You can only ask questions about what my kid sees outside the car window. Stay in character and keep the conversation going based on their answers.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Hand over the phone and let your kid talk back to the character — no typing needed if you use voice mode.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p9', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 10</div>
+    <div class="prompt-name">The Are-We-There-Yet Game</div>
+    <div class="prompt-text-box">
+      <p id="p10">My kid keeps asking how much longer until we get there. Turn it into a car game — have her count red cars, cows, or gas stations until we arrive, and cheer for her every time she spots one.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type how much longer the drive is, and let AI run the game with you.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p10', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 11</div>
+    <div class="prompt-name">The On-the-Spot Story Generator</div>
+    <div class="prompt-text-box">
+      <p id="p11">Tell a 1-minute made-up story for my 2 year old about [whatever she's pointing at out the window]. Keep it silly and simple, and end it happily so I can start a new one right after.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Speak or type whatever your kid is pointing at or asking about right now.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p11', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
 </div>
+
 
 <div class="footer">
   <p>These prompts are part of the Rosie universe —</p>
@@ -446,6 +564,11 @@
     p4: document.getElementById('p4').textContent.trim(),
     p5: document.getElementById('p5').textContent.trim(),
     p6: document.getElementById('p6').textContent.trim(),
+    p7: document.getElementById('p7').textContent.trim(),
+    p8: document.getElementById('p8').textContent.trim(),
+    p9: document.getElementById('p9').textContent.trim(),
+    p10: document.getElementById('p10').textContent.trim(),
+    p11: document.getElementById('p11').textContent.trim(),
   };
   const labels = {
     p1: 'PROMPT 1 — THE PARENTING GURU',
@@ -454,6 +577,11 @@
     p4: 'PROMPT 4 — THE MORNING BRIEF',
     p5: 'PROMPT 5 — THE GENTLE REFRAME',
     p6: 'BONUS — THE SNACK SCRAMBLE',
+    p7: 'PROMPT 7 — THE WOULD-YOU-RATHER GENERATOR',
+    p8: 'PROMPT 8 — THE ROAD TRIP DETECTIVE',
+    p9: 'PROMPT 9 — THE CURIOUS CHARACTER',
+    p10: 'PROMPT 10 — THE ARE-WE-THERE-YET GAME',
+    p11: 'PROMPT 11 — THE ON-THE-SPOT STORY GENERATOR',
   };
   function showToast(msg) {
     const t = document.getElementById('toast');
@@ -471,13 +599,13 @@
     });
   }
   function copyAll(btn) {
-    const intro = `5 AI PROMPTS TO CLOSE YOUR MENTAL TABS\nFrom @stephs.mom.era\n\nSave these as my go-to mom prompts. I'll ask for them by name.\n\n`;
+    const intro = `THE WORKING MOM'S AI PROMPT KIT\nFrom @stephs.mom.era\n\nSave these as my go-to mom prompts. I'll ask for them by name.\n\n`;
     const allText = Object.entries(prompts).map(([id, text]) => `--- ${labels[id]} ---\n${text}`).join('\n\n');
     const el = document.createElement("textarea"); el.value = intro + allText; document.body.appendChild(el); el.select(); document.execCommand("copy"); document.body.removeChild(el); (() => {
       const orig = btn.innerHTML;
       btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All Copied!`;
       btn.classList.add('copied');
-      showToast('✓ All 6 prompts copied');
+      showToast('✓ All 11 prompts copied');
       setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2500);
     });
   }
