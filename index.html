@@ -323,6 +323,7 @@
   <nav class="toc-inner">
     <a class="toc-link" href="#mental-load">🧠 Mental Load Reducer</a>
     <a class="toc-link" href="#road-trip">🚗 Road Trip</a>
+    <a class="toc-link" href="#school">🎒 School Stuff</a>
   </nav>
 </div>
 
@@ -356,7 +357,7 @@
   <div class="copy-all-wrap">
     <button class="btn-copy-all" onclick="copyAll(this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-      Copy All 11 Prompts
+      Copy All 13 Prompts
     </button>
   </div>
 
@@ -540,6 +541,40 @@
     </button>
   </div>
 
+  <div class="section-label" id="school">🎒 School Stuff</div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 12</div>
+    <div class="prompt-name">The School Email Sorter</div>
+    <div class="prompt-text-box">
+      <p id="p12">Here are this week's emails from my kids' schools. Pull out only what I need to do or bring, with the date it's due. Put it in one list, soonest first. Skip anything that's just information.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Paste in every school email from this week (or forward them all into one chat). Then hit send.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p12', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
+  <div class="prompt-card">
+    <div class="prompt-number">Prompt 13</div>
+    <div class="prompt-name">The School Calendar Importer</div>
+    <div class="prompt-text-box">
+      <p id="p13">This is my kids' school calendar. List every no-school day, early dismissal and event as a calendar event with the date and time. If a time isn't listed, mark it all day.</p>
+    </div>
+    <div class="prompt-instruction">
+      <span class="arrow">👉</span>
+      <span>Snap a photo of the school calendar and attach it before you hit send. Then ask it to make a calendar file you can import, or add the dates yourself.</span>
+    </div>
+    <button class="btn-copy" onclick="copyPrompt('p13', this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      Copy this prompt
+    </button>
+  </div>
+
 </div>
 
 
@@ -569,6 +604,8 @@
     p9: document.getElementById('p9').textContent.trim(),
     p10: document.getElementById('p10').textContent.trim(),
     p11: document.getElementById('p11').textContent.trim(),
+    p12: document.getElementById('p12').textContent.trim(),
+    p13: document.getElementById('p13').textContent.trim(),
   };
   const labels = {
     p1: 'PROMPT 1 — THE PARENTING GURU',
@@ -582,6 +619,8 @@
     p9: 'PROMPT 9 — THE CURIOUS CHARACTER',
     p10: 'PROMPT 10 — THE ARE-WE-THERE-YET GAME',
     p11: 'PROMPT 11 — THE ON-THE-SPOT STORY GENERATOR',
+    p12: 'PROMPT 12 — THE SCHOOL EMAIL SORTER',
+    p13: 'PROMPT 13 — THE SCHOOL CALENDAR IMPORTER',
   };
   function showToast(msg) {
     const t = document.getElementById('toast');
@@ -605,7 +644,7 @@
       const orig = btn.innerHTML;
       btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All Copied!`;
       btn.classList.add('copied');
-      showToast('✓ All 11 prompts copied');
+      showToast('✓ All 13 prompts copied');
       setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('copied'); }, 2500);
     });
   }
